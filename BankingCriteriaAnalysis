@@ -15,9 +15,6 @@ library(parsnip)
 # Load data
 loans_df <- read_rds("C:/Users/sun/Desktop/shareit/loan_data.rds")
 
-#-------------------------------------------------------------------------------
-# Data Analysis [30 Points]
-
 #Question 1
 # Are there any dependencies between loan takers and loan defaulters seen in their credit lines?
 
@@ -160,7 +157,7 @@ ggplot(current_jy_10, aes(x = loan_purpose, y = interest_rate)) +
 #     The first and third quartiles for each of the purpose is dissimilar
 
 #-------------------------------------------------------------------------------
-# Predictive Modelling 70 points
+# Predictive Modelling
 
 #2-Modelling techniques, 
 #Using loan_df with train and test data set to set the seed, while considering variables for model use recipe
@@ -372,7 +369,6 @@ rf_predictions %>%
 
 # Confusion matrix
 conf_mat(rf_predictions, truth = loan_default, estimate = .pred_class)
-
 
 #Theory for the project's outputs is as below:-
 
